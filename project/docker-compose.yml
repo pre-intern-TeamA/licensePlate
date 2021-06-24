@@ -1,0 +1,15 @@
+version: "3.0"
+
+services:
+  flask:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment: 
+      #- FLASK_APP=pybo
+      - FLASK_ENV=development
+    command: 
+      flask db init
+      flask db migrate
