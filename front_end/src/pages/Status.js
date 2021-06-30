@@ -27,26 +27,23 @@ const Status= () => {
         <div className="status_backImg">
             <div style={background}>
             <div style={parent_div}>
-<<<<<<< HEAD
             <div className="grid">
+            <div className="test">
             {users.map(user=>{
                 return(
                 <div className='class="item item align-center"'>
                     <img alt="pic" className='show_car' src={user.file_url}/>
                     <ul>
-                        <li>{user.car_number}</li>
-                        <li>{user.time}</li>
+                        <br/>{user.car_number}<br/>
+                        {user.current_time}<br/>
+                        {user.id}
                     </ul>
                 </div>
                 )
                 })}
             </div>
-=======
-                <div className="Car_Info">
-                    ◉{users.car_number}<br/>◉{users.current_time}<br/>
-                </div>
-                <img className="show_car" src={users.file_url}/>
->>>>>>> b55fcbd89907e2aba78b27adfd94d8f2a6634937
+            
+            </div>
             <a href='/home' >
                 <button href='/home' className="home">Return Home</button>
             </a>
