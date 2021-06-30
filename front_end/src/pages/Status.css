@@ -26,3 +26,16 @@
     text-decoration:none;
     text-shadow:0px -1px 0px #2b665e;
   }
+  .show_car{
+    width : 40%;
+    position: fixed;
+    top : 20%;
+    left: 15%;
+  }
+  .Car_Info{
+    position: fixed;
+    text-align: left;
+    font-size: 50px;
+    top : 70%;
+    left: 15%;
+  }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './Register.css';
 import Show from './Show';
+
 
 class Register extends Component {
     constructor(props){
@@ -12,7 +12,6 @@ class Register extends Component {
             isLoading : true
         }
     }
-
     handleFileOnChange = (event) => {
         event.preventDefault();
         let reader = new FileReader();
@@ -25,21 +24,10 @@ class Register extends Component {
           })
         }
         reader.readAsDataURL(file);
-      }
+    } 
     
     summit(){
-        const fd = new FormData();
-        fd.append('file',this.props.file);
-        fd.append('file_url',this.props.previewURL);
-        axios.post('http://localhost:3000/posts', fd,{
-            headers : {
-                "content-type": "multipart/form-data",
-            },
-        })
-        .then(response => {console.log(response)})
-        .catch(error => {console.log(error)})
-
-        alert("Registered. Returning to the Home screen.")
+        alert('Summited, Returning to the Home screen.')
     }
 
     reject(){
@@ -58,6 +46,9 @@ class Register extends Component {
             backgroundSize: "400% 400%",
             animation: "gradient 13s ease infinite",
         };
+
+
+
         return (
             <div className="register_backImg">
                 <div style={background}>
@@ -74,9 +65,11 @@ class Register extends Component {
                     onChange={this.handleFileOnChange}/></div>
                         : <Show File={this.state.file} URL={this.state.previewURL} />}
                 
+
                 {this.state.isLoading ?<div/>:
                 <div className="summit">
                     <h2>Would you like to register this car?</h2>
+                    
                     <a href='/home'>
                         <button className="summit_bnt" onClick={this.summit}>Yes</button>
                         <button className="summit_bnt" onClick={this.reject}>No</button>

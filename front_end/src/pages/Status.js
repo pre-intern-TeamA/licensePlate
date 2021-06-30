@@ -16,7 +16,7 @@ const Status= () => {
     
     const [users, setUsers] = useState([]);
     useEffect(() => {
-    axios.get('http://localhost:3000/posts')
+    axios.get('http://3.37.116.243:5000/status')
         .then(response =>{
             console.log(response)
             setUsers(response.data);
@@ -28,18 +28,12 @@ const Status= () => {
             <div style={background}>
             <div style={parent_div}>
                 <div className="Car_Info">
-                {users.map(user=>{
-                    return(
-                    <div className="user_info">
-                        Id : {user.id}    {user.time}<br/>
-                        <img alt="pic" className='profile_preview' src={user.file_url} class="img-rounded"/>
-                    </div>
-                    )
-                })}
+                    ◉{users.car_number}<br/>◉{users.current_time}<br/>
                 </div>
-                <a href='/home' >
-                    <button href='/home' className="home">Return Home</button>
-                </a>
+                <img className="show_car" src={users.file_url}/>
+            <a href='/home' >
+                <button href='/home' className="home">Return Home</button>
+            </a>
             </div>
             </div>
         </div>
