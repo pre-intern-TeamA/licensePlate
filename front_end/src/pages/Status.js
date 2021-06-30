@@ -30,7 +30,7 @@ const Status= () => {
             <div className="grid">
             {users.map(user=>{
                 return(
-                <div className='class="item item-1 align-center"'>
+                <div className='class="item item align-center"'>
                     <img alt="pic" className='show_car' src={user.file_url}/>
                     <ul>
                         <li>{user.car_number}</li>
