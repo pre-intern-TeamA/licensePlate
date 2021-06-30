@@ -1,0 +1,23 @@
+  .start_backImg{
+    background-image: url(../Image_file/Start_Page.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .move_on_script{
+    position: absolute;
+    width: 60%;
+    left: 22%;
+    top: 85%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 84px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+  }
