@@ -4,7 +4,11 @@ from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import config
-from datetime import datetime   # 테스트용이므로 후에 지우기
+#import os, sys
+#sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
+#from .imgfile.yolov5.carnumber import detect_number
+import time
+
 db = SQLAlchemy()
 migrate = Migrate()
 
@@ -14,45 +18,46 @@ app.config.from_object(config)
     # ORM
 db.init_app(app)
 migrate.init_app(app, db)
-#from . import models
 from detection.models import User
-    #return app
-    
-#app = create_app()
+
 CORS(app)
-#from app.models import User
-#db.create_all()
 
-def search_events(id):
-    return User.query.filter_by(id=id).all()
+def get_filename():
+    filename = secure_filename(g_file.filename)
+    return filename 
 
-@app.route("/post",methods=['POST'])
-def post():
-    global g_data, g_file
-    if request.is_json:
-        g_data = request.get_json()
-        user = User(id=g_data['id'], file_name=g_data['file_name'], current_time=g_data['time'])
-        print(user)
-        db.session.add(user)
-        db.session.commit()
-        #now = g_data['time']
-        #now = datetime(int(now))
-        #date_to_compare = datetime.strptime("20210629", "%Y%m%d")
-        #print("비교할 날짜: ", date_to_compare)
-        #date_diff = now - date_to_compare
-        #print("차이:", date_diff, ", Type:", type(date_diff))
-        #print("db!?!: ", search_events(g_data['id']))
-    else:
-        g_file = request.files['file']
-        g_file.save('./uploads/' + secure_filename(g_file.filename))
+@app.route("/register",methods=['POST'])
+def register():
+    global g_file, g_id
+
+    g_file = request.files['file']
+    filename = get_filename()
+    fileURL = request.form['file_url']
+    g_file.save('uploads/' + secure_filename(g_file.filename))
+    carNum = "12바 1234" #detect_number(g_filename)
+    g_id = request.form['id']
+    time_now = time.strftime('%c', time.localtime(time.time()))
+    user = User(id=g_id, file_name=filename, fileURL=fileURL, car_number=carNum, current_time=time_now)
+    db.session.add(user)
+    db.session.commit()
     return make_response(jsonify(success=True), 200)
 
-@app.route("/test", methods=['GET'])
-def test():
-    #global g_data
-    tmp = User.query.filter(User.id == 2).one()
-    print (tmp.file_name)
-    return jsonify(success=True), 200#g_data), 200
+@app.route("/status", methods=['GET'])
+def status():
+    import pandas as pd
+
+    all = User.query
+    df = pd.read_sql(all.statement, all.session.bind)
+    import json
+    data = json.loads(df.to_json(orient='records'))
+    return jsonify(data), 200
+
+@app.route("/delete/<del_id>", methods=['GET'])
+def delete(del_id):
+    tmp = User.query.filter(User.id == del_id).one()
+    db.session.delete(tmp)
+    db.session.commit()
+    return jsonify(success=True), 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
