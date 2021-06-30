@@ -27,6 +27,7 @@ const Status= () => {
         <div className="status_backImg">
             <div style={background}>
             <div style={parent_div}>
+<<<<<<< HEAD
             <div className="grid">
             {users.map(user=>{
                 return(
@@ -40,6 +41,12 @@ const Status= () => {
                 )
                 })}
             </div>
+=======
+                <div className="Car_Info">
+                    ◉{users.car_number}<br/>◉{users.current_time}<br/>
+                </div>
+                <img className="show_car" src={users.file_url}/>
+>>>>>>> b55fcbd89907e2aba78b27adfd94d8f2a6634937
             <a href='/home' >
                 <button href='/home' className="home">Return Home</button>
             </a>

@@ -1,4 +1,8 @@
 import './Show.css'
+<<<<<<< HEAD
+=======
+import Length from './Length';
+>>>>>>> b55fcbd89907e2aba78b27adfd94d8f2a6634937
 import axios from 'axios';
 
 function Show(props){

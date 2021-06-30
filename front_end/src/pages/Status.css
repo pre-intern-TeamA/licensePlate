@@ -8,7 +8,11 @@
   }
   .home{
     position: fixed;
+<<<<<<< HEAD
     top : 92%;
+=======
+    top : 90%;
+>>>>>>> b55fcbd89907e2aba78b27adfd94d8f2a6634937
     left: 42%;
 
     box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -28,6 +32,7 @@
   }
   .show_car{
     width : 40%;
+<<<<<<< HEAD
   }
   .user_info{
     text-align: left;
@@ -39,4 +44,16 @@
     grid-template-columns: repeat(2, 40rem);
     grid-auto-rows: 20rem;
     grid-gap: 7rem;
+=======
+    position: fixed;
+    top : 20%;
+    left: 15%;
+  }
+  .Car_Info{
+    position: fixed;
+    text-align: left;
+    font-size: 50px;
+    top : 70%;
+    left: 15%;
+>>>>>>> b55fcbd89907e2aba78b27adfd94d8f2a6634937
   }
