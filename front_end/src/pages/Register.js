@@ -27,11 +27,11 @@ class Register extends Component {
     } 
     
     summit(){
-        alert('Summited, Returning to the Home screen.')
+        alert('Summited, Going to Status Page.')
     }
 
     reject(){
-        alert('Returning to the Home screen.')
+        alert('Returning to the Home Page.')
     }
 
     render(){
@@ -70,8 +70,10 @@ class Register extends Component {
                 <div className="summit">
                     <h2>Would you like to register this car?</h2>
                     
-                    <a href='/home'>
+                    <a href='/status'>
                         <button className="summit_bnt" onClick={this.summit}>Yes</button>
+                    </a>
+                    <a href='/home'>
                         <button className="summit_bnt" onClick={this.reject}>No</button>
                     </a>
                 </div>}

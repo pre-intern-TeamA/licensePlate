@@ -4,7 +4,6 @@ import car_status from '../Image_file/park_status.png'
 import car_register from '../Image_file/register_car.png'
 
 const Home = () => {
-
     const parent_div = {
             width: "100%",
             height: "100%",
