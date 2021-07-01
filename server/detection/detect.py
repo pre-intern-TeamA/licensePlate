@@ -8,7 +8,6 @@ import argparse
 import sys
 import time
 from pathlib import Path
-
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
@@ -22,7 +21,7 @@ from utils.general import check_img_size, check_requirements, check_imshow, colo
     apply_classifier, scale_coords, xyxy2xywh, strip_optimizer, set_logging, increment_path, save_one_box
 from utils.plots import colors, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
-
+from detection.app import *
 
 @torch.no_grad()
 def run(weights='weights/last.pt',  # model.pt path(s)
@@ -185,7 +184,7 @@ def run(weights='weights/last.pt',  # model.pt path(s)
 def parse_opt():
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', nargs='+', type=str, default='weights/last.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default='img.jpg', help='file/dir/URL/glob, 0 for webcam')
+    parser.add_argument('--source', type=str, default=filename, help='file/dir/URL/glob, 0 for webcam')
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.35, help='confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='NMS IoU threshold')
