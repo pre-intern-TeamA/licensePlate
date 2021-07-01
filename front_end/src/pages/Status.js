@@ -10,7 +10,7 @@ const Status= () => {
     };
     const background = {
         width: "100%",
-        height: "100vh",
+        height: "200vh",
         backgroundSize: "400% 400%",
     };
     
@@ -31,13 +31,11 @@ const Status= () => {
             <div className="test">
             {users.map(user=>{
                 return(
-                <div className='class="item item align-center"'>
-                    <img alt="pic" className='show_car' src={user.file_url}/>
-                    <ul>
+                <div className="box">
+                    <img alt="pic" className='show_car' src={user.fileURL} align="left"/>
+                        ID : {user.id}
                         <br/>{user.car_number}<br/>
                         {user.current_time}<br/>
-                        {user.id}
-                    </ul>
                 </div>
                 )
                 })}

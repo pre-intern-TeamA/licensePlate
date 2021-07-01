@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Register.css';
 import Show from './Show';
 
-
 class Register extends Component {
     constructor(props){
         super(props);
@@ -62,11 +61,13 @@ class Register extends Component {
                     type='file' 
                     accept='image/jpg,impge/png,image/jpeg,image/png' 
                     name='car_img' 
-                    onChange={this.handleFileOnChange}/></div>
-                        : <Show File={this.state.file} URL={this.state.previewURL} />}
-                
+                    onChange={this.handleFileOnChange}/>
+                </div>
+                    : <Show File={this.state.file} URL={this.state.previewURL} />
+                }       
 
-                {this.state.isLoading ?<div/>:
+                {this.state.isLoading ? <div/>:
+
                 <div className="summit">
                     <h2>Would you like to register this car?</h2>
                     

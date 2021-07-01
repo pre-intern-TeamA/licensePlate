@@ -27,19 +27,30 @@
     text-shadow:0px -1px 0px #2b665e;
   }
   .show_car{
-    width : 40%;
+    width : 70%;
   }
   .user_info{
     text-align: left;
     font-size: 50px;
   }
+
   .grid{
     display: grid;
-    position : fixed;
-    top : 20%;
-    left : 0%;
-    grid-template-rows: repeat(2, minmax(25rem, auto));
-    grid-template-columns: repeat(2, 40rem);
-    grid-auto-rows: 20rem;
-    grid-gap: 7rem;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-gap: 100px;
+    padding: 50px;
+    width: 100%;
+    padding-top: 150px;
+  }
+  .box{
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    padding: 80px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 300px;
+    font: weight 100px;
   }
