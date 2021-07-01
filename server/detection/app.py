@@ -6,7 +6,8 @@ from flask_migrate import Migrate
 import config
 #import os, sys
 #sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
-#from .imgfile.yolov5.carnumber import detect_number
+#from yolov5.carnumber import detect_number
+from detection.carnumber import detect_number
 import time
 
 db = SQLAlchemy()
@@ -18,7 +19,7 @@ app.config.from_object(config)
     # ORM
 db.init_app(app)
 migrate.init_app(app, db)
-from detection.models import User
+from detection.model import User
 
 CORS(app)
 
@@ -33,8 +34,9 @@ def register():
     g_file = request.files['file']
     filename = get_filename()
     fileURL = request.form['file_url']
-    g_file.save('uploads/' + secure_filename(g_file.filename))
-    carNum = "12바 1234" #detect_number(g_filename)
+    g_file.save('./' + secure_filename(g_file.filename))
+    carNum = detect_number()
+    print("@@@carNum: ", carNum)
     g_id = request.form['id']
     time_now = time.strftime('%c', time.localtime(time.time()))
     user = User(id=g_id, file_name=filename, fileURL=fileURL, car_number=carNum, current_time=time_now)
