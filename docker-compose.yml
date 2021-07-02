@@ -12,7 +12,6 @@ services:
     command:
       flask run --host=0.0.0.0
       # nohup flask run --host=0.0.0.0
-		  # nohup flask run --host=0.0.0.0 &
     networks: 
       - webnet      
     restart: always
