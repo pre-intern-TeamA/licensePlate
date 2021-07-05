@@ -9,7 +9,6 @@ def detect_number(filename, _id):
     detect.run(source=filename)
     len_filename = len(filename)
     pure_filename = filename[0:len_filename-4]
-    print(_id)
     if _id == '1':
         open_route = 'runs/detect/exp/labels/'+pure_filename+'.txt'
     else:
@@ -34,4 +33,5 @@ def detect_number(filename, _id):
     cv2.imwrite('cropped.jpg',cropped)
 
     result = pytesseract.image_to_string(Image.open('cropped.jpg'),lang='kor',config='--psm 10')
+    print(result)   # debug
     return result
