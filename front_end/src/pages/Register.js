@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Register.css';
 import Show from './Show';
+import Upload from './Upload';
 
 class Register extends Component {
     constructor(props){
@@ -26,6 +27,7 @@ class Register extends Component {
     } 
     
     summit(){
+        <Upload File={this.state.file} URL={this.state.previewURL} />
         alert('Summited, Going to Status Page.')
     }
 
@@ -64,10 +66,9 @@ class Register extends Component {
                     onChange={this.handleFileOnChange}/>
                 </div>
                     : <Show File={this.state.file} URL={this.state.previewURL} />
-                }       
+                }   
 
                 {this.state.isLoading ? <div/>:
-
                 <div className="summit">
                     <h2>Would you like to register this car?</h2>
                     
@@ -78,7 +79,6 @@ class Register extends Component {
                         <button className="summit_bnt" onClick={this.reject}>No</button>
                     </a>
                 </div>}
-
                 </div>
                 </div>
             </div>
