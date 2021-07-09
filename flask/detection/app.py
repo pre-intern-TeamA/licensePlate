@@ -13,7 +13,7 @@ migrate = Migrate()
 app = Flask(__name__)
 app.config.from_object(config)
 
-    # ORM
+# ORM
 db.init_app(app)
 migrate.init_app(app, db)
 from detection.model import User
@@ -23,15 +23,18 @@ def get_filename():
     filename = secure_filename(g_file.filename)
     return filename
 
+# register the data received by POST
 @app.route("/register",methods=['POST'])
 def register():
     global g_file, g_id, filename
 
+    # form data
     g_file = request.files['file']
     filename = get_filename()
     fileURL = request.form['file_url']
+    # save
     g_file.save('./' + secure_filename(g_file.filename))
-    g_id = filename[0:1]
+    g_id = filename[0:1] # get id from filename
     carNum = detect_number(filename, g_id)
     print("carNum: ", carNum)   # debug
     time_now = time.strftime('%c', time.localtime(time.time()))
@@ -40,6 +43,7 @@ def register():
     db.session.commit()
     return make_response(jsonify(success=True), 200)
 
+# check the db table status
 @app.route("/status", methods=['GET'])
 def status():
     import pandas as pd
@@ -49,6 +53,7 @@ def status():
     data = json.loads(df.to_json(orient='records'))
     return jsonify(data), 200
 
+# delete the data
 @app.route("/delete/<del_id>", methods=['GET'])
 def delete(del_id):
     tmp = User.query.filter(User.id == del_id).one()

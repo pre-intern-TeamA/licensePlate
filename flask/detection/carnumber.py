@@ -21,17 +21,21 @@ def detect_number(filename, _id):
     Number=filename
     img=cv2.imread(Number,cv2.IMREAD_COLOR)
     h,w,_ = img.shape
-
+    # get the coordinates
     a=int(w*(tofloat[1] -tofloat[3]/2))
     b=int(w*(tofloat[1] +tofloat[3]/2))
     c=int(h*(tofloat[2] -tofloat[4]/2))
     d=int(h*(tofloat[2] +tofloat[4]/2))
 
+
     copy_img=img.copy()
+    # gray-scale
     img2=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    # cropped
     cropped = img2[c:d,a+10:b-10]
     cv2.imwrite('cropped.jpg',cropped)
 
+    # get number using tesseract
     result = pytesseract.image_to_string(Image.open('cropped.jpg'),lang='kor',config='--psm 10')
     print(result)   # debug
     return result

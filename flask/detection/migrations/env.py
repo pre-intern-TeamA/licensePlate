@@ -4,6 +4,7 @@ import logging
 from logging.config import fileConfig
 
 from flask import current_app
+# add the table
 from detection.models import User
 from alembic import context
 
