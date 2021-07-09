@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 import Status from './pages/Status'
 
+// 이동할 페이지간 route로 연결
 const App = () => {
   return (
     <Layout>

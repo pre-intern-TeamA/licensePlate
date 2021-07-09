@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// 차량 등록시 이미지와 id, 이미지 url을 formdata 형식으로 axios로 post
 function Upload(props){
     const fd = new FormData();
     fd.append('id', 5);
