@@ -1,0 +1,60 @@
+
+  .status_backImg{
+    background-image: url(../Image_file/status.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .home{
+    position: fixed;
+    top : 92%;
+    left: 42%;
+
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+    background-color:#768d87;
+    border-radius:5px;
+    border:1px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:11px 40px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+  }
+
+
+  
+  .show_car{
+    width: 250px;
+  }
+  .user_info{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 50px;
+    width: 90%;
+    padding-top: 60px;
+  }
+  .box{
+    box-shadow: 0 13px 27px -5px rgb(5, 6, 43),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    padding: 40px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    font: weight 100px;
+  }

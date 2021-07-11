@@ -1,0 +1,15 @@
+# node.js와 npm이 설치되어 있다.
+FROM node:latest
+
+# 컨테이너 내부 작업공간
+WORKDIR /app
+
+# 환경변수 설정
+ENV PATH /app/node_modules/.bin:$PATH 
+
+COPY package*.json ./
+
+RUN npm install -g npm@7.19.0 react-scripts && \
+    npm install --silent
+
+CMD ["npm", "start"]
