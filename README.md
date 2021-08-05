@@ -92,8 +92,3 @@ git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>
     <td>Back-End<br/>Developer</td>
   </tr>
 </table>
-<style>
-  table{
-  font-align : center;
-  }
-</style>
