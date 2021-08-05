@@ -71,3 +71,11 @@ ex)
 
 git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>과 <strong>유지보수</strong>를 편하게, 그리고 더 나은 <strong>협업</strong>을 할 수 있을 것 같습니다.
 
+<table>
+  <tr>
+    <td>김현빈</td>
+    <td>송고은</td>
+    <td>오현택</td>
+    <td>조윤근</td>
+  </tr>
+</table>
