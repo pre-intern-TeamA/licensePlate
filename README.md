@@ -72,7 +72,7 @@ ex)
 git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>과 <strong>유지보수</strong>를 편하게, 그리고 더 나은 <strong>협업</strong>을 할 수 있을 것 같습니다.
 
 <h1>Contributors</h1>
-<table style="text-align : center;">
+<table style="text-align: center;">
   <tr>
     <th>김현빈</th>
     <th>송고은</th>
