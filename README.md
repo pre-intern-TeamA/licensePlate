@@ -73,9 +73,10 @@ git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>
 
 <table>
   <tr>
-    <td>김현빈</td>
-    <td>송고은</td>
-    <td>오현택</td>
-    <td>조윤근</td>
+    <th>김현빈</th>
+    <th>송고은</th>
+    <th>오현택</th>
+    <th>조윤근</th>
   </tr>
+  
 </table>
