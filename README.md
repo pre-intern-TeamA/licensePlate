@@ -85,7 +85,7 @@ git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>
     <th><a href="https://github.com/hyeontack5">@hyeontack5</a></th>
     <th><a href="https://github.com/Yunkeun">@Yunkeun</a></th>
   </tr>
-  <tr>
+  <tr style="text-align:center;">
     <td>Front-End<br/>Developer</td>
     <td>AI<br/>Developer</td>
     <td>AI, Dev<br/>Developer</td>
