@@ -71,6 +71,7 @@ ex)
 
 git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>과 <strong>유지보수</strong>를 편하게, 그리고 더 나은 <strong>협업</strong>을 할 수 있을 것 같습니다.
 
+<h1>Contributors</h1>
 <table>
   <tr>
     <th>김현빈</th>
@@ -85,7 +86,9 @@ git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>
     <th><a href="https://github.com/Yunkeun">@Yunkeun</a></th>
   </tr>
   <tr>
-    <th>Front-End<br/>Developer</th>
-    
+    <td>Front-End<br/>Developer</td>
+    <td>AI<br/>Developer</td>
+    <td>AI, Dev<br/>Developer</td>
+    <td>Back-End<br/>Developer</td>
   </tr>
 </table>
