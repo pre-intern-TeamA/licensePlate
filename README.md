@@ -1,77 +1,31 @@
-# licensePlate #
+# :car: What the Park :blue_car:
+'__What the Park__' is a web service that automatically recognizes license plates to manage parking lots.
 
-<h2> 커밋 메시지의 형식 </h2>
+<br>
 
-커밋 메시지는 아래와 같이 제목/본문/꼬리말으로 구성한다.
+## :mag: Outline
+- There are many management services for official parking lots, but there is no one-time service for simple parking lots. Accordingly, the parking lot manager writes and manages the vehicle's entry and departure information manually. We developed the service to solve these inconveniences. <br>
+- For the service, the vehicle number recognition API was developed and the parking lot status page was developed for the user to manage through vehicle information. <br>
+- We expect that you can manage the parking lot conveniently through our service in a simple parking lot without parking facilities.
 
-```
-<타입>(<적용범위>): 제목
-<type>(<scope>): <subject>
---------(BLANK LINE)--------
-본문<body>...(생략 가능)
---------(BLANK LINE)--------
-꼬리말<footer>...(생략가능)
-```
+<br>
 
-```
-ex) 
-docs(readme): README 문서 수정
+## :computer: User Interface
+![KakaoTalk_20210806_003901996](https://user-images.githubusercontent.com/70425484/128379591-fa96ad0c-b4ba-4dcc-b116-ccb5569ebcd7.gif)
 
-- readme.md에 커밋 메시지 형식 추가함.
---------(BLANK LINE)--------
-- 내용이 길어지면 빈 행(blank line)을 둬서 구분합니다.
-- 추가 내용이 있을 시 "-"을 추가하면서 적어 줍니다.
+<br>
 
-현재 꼬리말은 사용하지 않도록 하겠습니다.
-어렵습니다.
-```
+## :computer: System Architecture
+<img width="836" alt="architecture" src="https://user-images.githubusercontent.com/70425484/128380390-a1eea339-d512-46fa-bc9b-003a8aad2747.png">
 
-아래 타입, 적용범위, 제목, 본문 작성법은 아래를 참고하시오.
+<br>
 
-<h2> 1. 타입 </h2>
+## :bulb: Tech Stack
+<img width="854" alt="techstack" src="https://user-images.githubusercontent.com/70425484/128381156-071992a8-b13b-40ed-ad91-1423b33e7bb3.png">
 
-* `feat` : 새로운 기능에 대한 커밋
-* `fix` : 버그 수정에 대한 커밋
-* `!hotfix` : 급하게 치명적인 버그를 고쳐야하는 경우
-* `build` : 빌드 관련 파일 수정에 대한 커밋
-* `docs` : 도큐먼트에 수정에 대한 커밋
-* `style` : 코드 문법 또는 포맷에 대한 수정에 대한 커밋
-* `refactor` : 코드 리팩토링에 대한 커밋
-* `chore` : 그 외 자잘한 수정에 대한 커밋
+<br>
 
-<h2>  2. 제목 </h2>
-
-* 명령조로 적는다.
-* 과거형으로 적지 않는다.
-* 끝에 <strong>. 닷</strong> 을 붙이지 않는다.
-* 제목과 본문은 <strong>빈 행(blank line)</strong>으로 구분한다.
-* 타입(적용범위): <strong>(한칸 띄고)</strong> 제목
-
-``` 
-ex) 
-feat(package.json): react 화면전환 기능 추가
-
--> package.jason 파일에서 화면전환 기능을 추가했다는 뜻입니다.
-```
-
-
-<h2> 3. 본문 </h2>
-
-* 구체적으로 적는다.
-* 본문 내용은 <strong>어떻게 변경했는지</strong> 보다 <strong>무엇을 왜 변경했는지</strong>를 설명한다.
-* 본문에 여러줄의 메시지를 작성할 땐 <strong>"-"</strong>로 구분
-* 내용이 길어지면 <strong>빈 행(blank line)</strong>을 둬서 가독성이 좋게한다.
-* <strong>"-"</strong>뒤에는 <strong>한칸 띄고</strong> 내용을 작성한다.
-
-```
-ex)
-- 내용을 여기다가 적으시면 됩니다.
-- README 파일 문제있어서 삭제 후 올립니다.
-```
-
-git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>과 <strong>유지보수</strong>를 편하게, 그리고 더 나은 <strong>협업</strong>을 할 수 있을 것 같습니다.
-
-<h1>Contributors</h1>
+## :family: Contributors (2021/05/24 ~ 2021/07/03)
 <table>
   <tr>
     <th>김현빈</th>
