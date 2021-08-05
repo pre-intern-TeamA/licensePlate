@@ -79,7 +79,7 @@ git 커밋 메시지를 위한 약속을 지킨다면 <strong>가독성</strong>
     <th>조윤근</th>
   </tr>
   <tr>
-    <th>@biiiiiin</th>
+    <th href="https://github.com/biiiiiin">@biiiiiin</th>
     <th>@goeunsong</th>
     <th>@hyeontack5</th>
     <th>@Yunkeun</th>
